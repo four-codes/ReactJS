@@ -1,0 +1,7 @@
+{
+    "name": "Menu",
+    "main": "./Menu.js",
+    "version": "1.0.1",
+    "private": true
+    
+}
