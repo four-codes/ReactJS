@@ -31,19 +31,19 @@ export default class MainPage extends Component {
                 <Container>
                     <Row>
                         {
-                            content.map((res, key) => (
-                                <Col md={4} key={key}>
-                                <Card style={{ width: '18rem' }}>
-                                    <Card.Body>
-                                        <Card.Title>{res.title}</Card.Title>
-                                        <Card.Text>
-                                            {res.body}
-                                        </Card.Text>
-                                        <Button variant="primary">linux</Button>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-                                ))
+                        content.map((res, key) => (
+                            <Col md={4} key={key}>
+                            <Card style={{ width: '18rem' }}>
+                                <Card.Body>
+                                    <Card.Title>{res.title}</Card.Title>
+                                    <Card.Text>
+                                        {res.body}
+                                    </Card.Text>
+                                    <Button variant="primary">linux</Button>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                            ))
                         }
                     </Row>
                 </Container>

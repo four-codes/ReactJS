@@ -89,11 +89,17 @@ const useStyles = makeStyles(theme => ({
   },
   link: {
     color: "black",
+    textAlign: "left",
+    width: "100%",
+    display: "inline-block",
     "&:hover, &:focus": {
       textDecoration: "none",
       color: "black",
-      background: "red"
+      background: "gray",
     }
+  },
+  listText: {
+    textAlign: "left",
   }
 }));
 
@@ -150,10 +156,10 @@ function App() {
           </div>
           <Divider />
           <List>
-            <Link to="/Home" className={classes.link}>
+            <Link to="/" className={classes.link}>
               <ListItem button>
-                <ListItemIcon><HomeIcon /></ListItemIcon>
-                <ListItemText primary="Home" />
+                <ListItemIcon><MenuIcon /></ListItemIcon>
+                <ListItemText primary="MAIN" className={classes.listText}/>
               </ListItem>
             </Link>
           </List>
@@ -161,13 +167,21 @@ function App() {
           <List>
           <Link to="/Home" className={classes.link}>
               <ListItem button>
-                <ListItemIcon><MailIcon /></ListItemIcon>
-                <ListItemText primary="About" />
+                <ListItemIcon><HomeIcon /></ListItemIcon>
+                <ListItemText primary="HOME" className={classes.listText} />
               </ListItem>
             </Link>
           </List>
           <Divider />
-
+          <List>
+          <Link to="/About" className={classes.link}>
+              <ListItem button>
+                <ListItemIcon><MailIcon /></ListItemIcon>
+                <ListItemText primary="ABOUT" className={classes.listText} />
+              </ListItem>
+            </Link>
+          </List>
+          <Divider />
 
           {/* <List>
             {['All mail', 'Trash', 'Spam'].map((text, index) => (
